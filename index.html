@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>" />
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/90f10519ce.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <img
+      src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Nature"
+      class="bg-image" />
+    <div class="app">
+      <header>
+        <h1>What's the weather today?</h1>
+
+        <div class="city-search">
+          <div class="current-city">
+            <i class="fa-solid fa-location-arrow"></i>
+            <h2 id="city">No city added</h2>
+          </div>
+
+          <div class="city-input">
+            <input type="search" id="city-input" placeholder="Search a city" />
+            <button id="search-btn">Search</button>
+          </div>
+        </div>
+      </header>
+
+      <main id="main">
+        <div id="loading" class="loader hidden"></div>
+        <p id="error" class="hidden"></p>
+
+        <div id="weather" class="weather hidden">
+          <h3 id="temp"></h3>
+
+          <div class="weather-container">
+            <div class="wind">
+              <span><i class="fa-solid fa-wind"></i>Wind</span>
+              <p id="wind"></p>
+            </div>
+            <div id="conditions" class="conditions"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
